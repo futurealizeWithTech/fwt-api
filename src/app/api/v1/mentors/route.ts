@@ -11,10 +11,10 @@ export const GET = async (req: Request, res: NextResponse) => {
       },
     });
 
-    return NextResponse.json({mentors}, {status: 200});
+    return NextResponse.json({ mentors }, { status: 200 });
   } catch (e) {
-    return NextResponse.json({message: 'fetch error', e}, {status: 500});
+    return NextResponse.json({ message: "fetch error", e }, { status: 500 });
   } finally {
     prisma.$disconnect();
-  };
+  }
 };
