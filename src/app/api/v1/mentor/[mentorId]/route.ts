@@ -12,9 +12,6 @@ export const GET = async (
       where: {
         mentorId: Number(mentorId),
       },
-      include: {
-        mentor: true,
-      },
     });
     return NextResponse.json({ messages }, { status: 201 });
   } catch (error) {
