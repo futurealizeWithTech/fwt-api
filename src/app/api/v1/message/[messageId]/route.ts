@@ -12,6 +12,9 @@ export async function GET(
       where: {
         id: Number(messageId),
       },
+      include: {
+        mentor: true,
+      },
     });
     return NextResponse.json({ message }, { status: 200 });
   } catch (error) {
